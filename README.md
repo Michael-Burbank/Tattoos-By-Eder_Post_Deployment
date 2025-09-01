@@ -109,9 +109,7 @@ A professional portfolio website for Eder Sanchez, a tattoo artist specializing 
 2. **Open the Project**
 
    - Open `index.html` in your browser to view the website.
-
-3. Install Git LFS: Make sure to install Git LFS for managing larger media files. Instructions are provided below.
-
+  
 ---
 
 ## Optional Features
