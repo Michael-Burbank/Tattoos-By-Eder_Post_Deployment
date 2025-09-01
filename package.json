@@ -1,0 +1,16 @@
+{
+  "name": "eder-sanchez",
+  "version": "1.0.0",
+  "description": "A professional portfolio website for Eder Sanchez, a tattoo artist specializing in Black and Grey Chicano Realism. The site showcases Eder's work, provides information about his services, and allows potential clients to contact him for appointments and inquiries.",
+  "main": "purge.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "purgecss": "node purge.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "purgecss": "^7.0.2"
+  }
+}

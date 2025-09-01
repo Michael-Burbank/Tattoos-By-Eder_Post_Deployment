@@ -1,0 +1,137 @@
+.about-artist {
+  background-color: #e0e0e0;
+  color: var(--bg-color);
+  width: 100vw; /* Full screen width */
+  margin-left: -80px;
+  margin-right: -80px;
+  position: relative; /* Ensures it ignores body constraints */
+  overflow-x: hidden;
+  padding: 100px 0;
+}
+
+.about-artist .about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px; /* Prevents content from touching screen edges */
+}
+
+.about-artist-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+
+.artist-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.artist-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.artist-info {
+  flex: 1;
+  max-width: 50%;
+}
+
+.artist-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-family: var(--heading-font);
+  margin-top: 0;
+}
+
+.artist-info p {
+  font-size: 18px;
+  line-height: 1.95;
+  margin-bottom: 30px;
+  max-width: 85%;
+}
+
+.artist-info a {
+  text-decoration: none;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 1124px) {
+  .about-artist {
+    margin-left: -70px;
+    margin-right: -70px;
+  }
+  .about-artist-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    text-align: center; /* Centers text */
+    align-items: center; /* Centers content */
+  }
+
+  .artist-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers text & button */
+  }
+
+  .artist-info p {
+    width: 100%; /* Makes paragraph smaller */
+    margin-bottom: 10px;
+  }
+
+  .artist-image {
+    max-width: 100%;
+  }
+
+  .artist-info {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about-artist {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .artist-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .artist-info p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .artist-info .primary-button {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-artist {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .artist-image {
+    max-width: 100%;
+    margin: 20px 0 30px;
+    padding: 0 20px;
+  }
+
+  .about-artist {
+    padding: 70px 0;
+  }
+
+  .artist-info p {
+    font-size: 16px;
+    line-height: 1.95;
+  }
+}

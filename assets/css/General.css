@@ -1,0 +1,53 @@
+:root {
+  --heading-font: "Playfair Display", serif;
+  --body-font: "Times New Roman", Times, serif;
+  --bg-color: #121212;
+  --secondary-color: #89272f;
+  --text-color: #ededed;
+  --vertical-margin: 0 72px;
+  --btn-hover: #67141b;
+  --error-red: #e74c3c;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--body-font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: var(--vertical-margin);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+/* General button styles */
+.button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: var(--body-font);
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.container {
+  width: 100%;
+  max-width: 1550px;
+  margin-left: auto;
+  margin-right: auto;
+}

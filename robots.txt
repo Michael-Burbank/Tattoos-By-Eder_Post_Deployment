@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /login/
+Disallow: /assets/PHP/
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Crawl delay for well-behaved bots
+Crawl-delay: 1
+
+Sitemap: https://www.tattoosbyeder.com/sitemap.xml

@@ -1,0 +1,246 @@
+.hero {
+  position: relative;
+  width: 100%;
+  /* min-height: 100vh; */
+}
+.hero .hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.hero .hero-content .hero-title {
+  font-size: 3.5vw;
+  font-family: var(--heading-font);
+}
+span {
+  color: var(--secondary-color);
+}
+.hero .hero-content .hero-description {
+  width: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-content .hero-description p {
+  margin-bottom: 26px;
+  line-height: 1.95rem;
+
+  font-size: 18px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.lined-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.lined-text::before,
+.lined-text::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background-color: var(--text-color);
+  margin: 0 20px;
+}
+
+.hero .hero-content .hero-description a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: var(--heading-font);
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+}
+.hero .hero-content .hero-description a i {
+  margin-left: 10px;
+  transition: margin-left 0.3s ease;
+  color: var(--secondary-color);
+}
+
+.hero .hero-content .hero-description a:hover i {
+  margin-left: 20px;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+/* Swiper */
+
+.swiper {
+  width: 100%;
+  height: 400px; /* Or whatever fixed height you prefer */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: var(--text-color);
+  font-size: 24px !important;
+  font-weight: bold !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  font-size: 2px;
+  background-color: #89272fc1;
+  border-radius: 35%;
+}
+.swiper-button-prev {
+  border-left: 2px solid #acabab;
+  border-top: 2px solid #acabab;
+  border-bottom: 2px solid #acabab;
+}
+.swiper-button-next {
+  border-right: 2px solid #acabab;
+  border-top: 2px solid #acabab;
+  border-bottom: 2px solid #acabab;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #89272f;
+}
+
+.swiper-pagination-bullet {
+  background-color: black !important;
+  /* opacity: 1; */
+  width: 10px;
+  height: 10px;
+  border: 1px white solid;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #89272fc1 !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .hero .hero-content .hero-title {
+    font-size: 3vw;
+  }
+  .hero .hero-content .hero-description p {
+    max-width: 90%;
+  }
+  .lined-text {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1124px) {
+  .hero .hero-content {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 50px 0 30px;
+  }
+  .hero .hero-content .hero-title {
+    font-size: 5vw;
+  }
+  .hero .hero-content .hero-title h1 {
+    margin: 0;
+    padding: 0;
+  }
+  .hero .hero-content .hero-description {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hero .hero-content {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    margin: 0;
+    padding: 30px 0 40px;
+  }
+
+  .hero .hero-content .hero-title {
+    font-size: 5.5vw;
+    margin: 10px 0;
+  }
+
+  .hero .hero-content .hero-description {
+    max-width: 90%;
+  }
+
+  .hero .hero-content .hero-description p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .lined-text {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .lined-text {
+    font-size: 18px;
+    width: 100%;
+  }
+  .hero-description br {
+    display: none;
+  }
+  .lined-text::before,
+  .lined-text::after {
+    width: 20px;
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero .hero-content {
+    text-align: center;
+    padding: 10px 0 30px;
+  }
+  .hero .hero-content .hero-title {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+  .hero .hero-content .hero-description {
+    width: 100%;
+  }
+  .hero .hero-content .hero-description p {
+    font-size: 16px;
+    line-height: 1.95;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .hero .hero-content .hero-description a {
+    display: none;
+  }
+  .lined-text {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .lined-text::before,
+  .lined-text::after {
+    width: 20px;
+    margin: 0 8px;
+  }
+}

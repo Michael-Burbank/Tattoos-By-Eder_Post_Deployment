@@ -1,0 +1,221 @@
+.faq {
+  background-color: #e0e0e0; /* Adjust as needed */
+  color: var(--bg-color); /* Text color */
+  padding: 60px 0; /* Padding on left and right */
+  font-family: var(--body-font);
+  width: 100vw; /* Full width of viewport */
+  margin-left: -80px;
+  margin-right: -80px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.faq .faq-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq .faq-header h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-family: var(--heading-font);
+}
+
+.faq .faq-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.faq .faq-header hr {
+  border: none;
+  border-top: 1px solid #909090;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.faq .faq-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto; /* Centers the entire section */
+}
+
+.faq .faq-column {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%; /* Ensures both columns take equal width */
+  margin: 0;
+}
+
+.faq .faq-column .faq-item {
+  margin-bottom: 50px;
+  width: calc(100% - 20px); /* Subtracts padding/margins */
+  max-width: 100%; /* Ensures it never overflows */
+  box-sizing: border-box; /* Ensures padding/borders are included */
+}
+
+.faq .faq-column .faq-item h4 {
+  line-height: 1.5;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.faq .faq-column .faq-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #121212c9;
+  margin: 0;
+}
+.faq-toggle-icon {
+  color: var(--secondary-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.faq-toggle-icon {
+  font-size: 22px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-item.open .faq-toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Smooth FAQ opening effect */
+.faq .faq-content .faq-column .faq-item p {
+  max-height: none;
+  opacity: 1;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+}
+
+.faq .faq-content .faq-column .faq-item.open p {
+  opacity: 1;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 1124px) {
+  .faq {
+    margin-left: -70px;
+    margin-right: -70px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .faq {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+  .faq .faq-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    flex-direction: column;
+
+    width: 80%; /* Adjusted from 70% */
+  }
+
+  .faq .faq-column {
+    min-width: 500px;
+  }
+  .faq .faq-content .faq-column .faq-item {
+    position: relative;
+    background: rgba(240, 240, 240, 0.8);
+    border: 1px solid rgba(200, 200, 200, 0.6);
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+    text-align: left; /* Keeps all content aligned left */
+    width: 100%;
+
+    margin-bottom: 20px;
+  }
+
+  .faq .faq-item:hover {
+    background: rgba(220, 220, 220, 0.9);
+    border-color: rgba(180, 180, 180, 0.8);
+  }
+
+  .faq .faq-content .faq-column .faq-item h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left; /* Ensures heading stays left-aligned */
+  }
+
+  .faq .faq-item .faq-toggle-icon {
+    font-size: 22px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .faq .faq-item.open {
+    background: rgba(230, 230, 230, 0.9);
+    border-color: rgba(160, 160, 160, 0.9);
+  }
+
+  .faq .faq-item p {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Ensures paragraph stays left-aligned */
+  }
+  .faq .faq-content .faq-column .faq-item p {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .faq {
+    padding: 40px 0;
+  }
+  .faq .faq-content .faq-column .faq-item h4 {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  .faq .faq-content .faq-column .faq-item p {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .faq .faq-column {
+    width: 100%;
+  }
+  .faq .faq-column {
+    min-width: 400px;
+  }
+  .faq .faq-content .faq-column .faq-item p {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .faq {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .faq .faq-column {
+    min-width: 300px;
+  }
+  .faq .faq-content .faq-column .faq-item h4 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .faq .faq-column {
+    min-width: 270px;
+  }
+  .faq .faq-content .faq-column .faq-item h4 {
+    font-size: 14px;
+  }
+}

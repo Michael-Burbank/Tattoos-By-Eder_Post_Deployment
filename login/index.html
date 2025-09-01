@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Tattoos by Eder</title>
+    <link rel="stylesheet" href="login.css?v=4">
+    
+    <!-- Favicon links -->
+  <link rel="apple-touch-icon" href="/assets/media/favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/media/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/media/favicon_io/favicon-16x16.png" />
+  <link rel="manifest" href="/assets/media/favicon_io/site.webmanifest" />
+
+  <link rel="icon" type="image/x-icon" href="/assets/media/favicon_io/favicon.ico" />
+
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/media/favicon_io/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/media/favicon_io/android-chrome-512x512.png" />
+
+    <!-- Google reCAPTCHA API Widget -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- TODO! COMMENT OUT when UI/UX is FINISHED  -->
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="https://res.cloudinary.com/dbbedy5lo/image/upload/w_200,q_auto,f_auto/v1741267070/logo_white_sqp5fn.png" alt="Tattoos by Eder Logo">
+        </div>
+        
+        <h1 class="login-title">Admin Login</h1>
+        
+        <form action="login.php" method="post" id="login-form" class="login-form" enctype="multipart/form-data" role="form">
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="username" class="username-label"></label>
+                    <input type="text" class="username-input" id="username" name="username" placeholder="Username.." required>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="password-label"></label>
+                    <input class="password-input" type="password" id="password" name="password" placeholder="Password.." required>
+                </div>
+            </div>
+            
+            <div class="form-group full-width recaptcha-container">
+                <div class="g-recaptcha" data-sitekey="6LcH3WcrAAAAADkdkF8i2SCnzCANm9loEDoBNXTg" data-theme="dark"></div>
+            </div>
+
+            <button type="submit" class="login-button">
+                <i class="ri-login-box-line"></i> Login
+            </button>
+        </form>
+        
+        <div class="login-footer">
+            <a href="https://tattoosbyeder.com/">← Back to Website</a>
+        </div>
+    </div>
+
+    <!-- Modal Popup with proper structure for error messages -->
+    <div id="modal-popup" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">✕</span>
+            <img loading="lazy"
+                src="https://res.cloudinary.com/dbbedy5lo/image/upload/w_200,q_95,f_auto/v1741267070/logo_white_sqp5fn.png"
+                alt="Tattoos by Eder Logo" class="modal-logo" width="100" height="100" />
+            
+            <!-- Dynamic content areas for title and message -->
+            <h2 id="modal-title">Login Error</h2>
+            <p id="modal-message">Please try again.</p>
+            
+            <!-- Action button -->
+            <button id="modal-ok-btn" class="modal-button">OK</button>
+        </div>
+    </div>
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Include the JavaScript -->
+    <script src="login.js"></script>
+</body>
+
+</html>

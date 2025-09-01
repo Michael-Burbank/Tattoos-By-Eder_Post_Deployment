@@ -1,0 +1,144 @@
+.tattoo-video-section .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin: 70px 0 0px;
+}
+
+.tattoo-video-section .header-text h2 {
+  font-size: 26px;
+  font-family: var(--heading-font);
+  text-align: center;
+  margin: 0;
+}
+
+.tattoo-video-section .header-text p {
+  line-height: 1.95rem;
+  font-size: 18px;
+}
+
+.tattoo-video-section .gallery-button-container {
+  width: 120%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tattoo-video-section .gallery-button {
+  position: relative;
+  z-index: 1;
+  width: 10rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.tattoo-video-section .section-content {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  margin: 20px 0 80px;
+}
+
+/* Custom Video Play Button */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Play triangle icon inside the play button */
+.play-icon {
+  width: 0;
+  height: 0;
+  border-left: 20px solid black;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  margin-left: 4px;
+}
+
+.tattoo-video-section .video-wrapper {
+  flex: 11;
+  max-width: 55vw;
+  display: flex;
+  position: relative;
+}
+
+.tattoo-video-section .video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.1) contrast(1.1) saturate(1.2)
+    drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.4));
+}
+
+.tattoo-video-section .image-gallery {
+  flex: 9;
+  max-width: 45vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  align-items: stretch;
+}
+
+.tattoo-video-section .image-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tattoo-video-section .image-gallery img:nth-child(2),
+.tattoo-video-section .image-gallery img:nth-child(3) {
+  filter: grayscale(1);
+}
+
+@media screen and (max-width: 900px) {
+  .tattoo-video-section .section-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .tattoo-video-section .header-text p {
+    max-width: 80%;
+    margin: 20px auto;
+    font-size: 16px;
+  }
+
+  .tattoo-video-section .gallery-button-container {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .tattoo-video-section .section-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 50px;
+  }
+
+  .tattoo-video-section .video-wrapper {
+    max-width: 90vw;
+  }
+
+  .tattoo-video-section .image-gallery {
+    display: none;
+  }
+
+  .tattoo-video-section .gallery-button {
+    width: 12rem;
+    font-size: 0.9rem;
+  }
+}

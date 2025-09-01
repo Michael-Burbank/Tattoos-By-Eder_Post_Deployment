@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.tattoosbyeder.com/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/dbbedy5lo/image/upload/q_auto,f_auto/v1741267070/logo_white_sqp5fn.png</image:loc>
+      <image:title>Tattoos By Eder Logo</image:title>
+      <image:caption>Professional tattoo artist specializing in Black and Grey Chicano Realism</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Add more URLs for important sections if they become separate pages -->
+  <!--
+  <url>
+    <loc>https://www.tattoosbyeder.com/gallery</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.tattoosbyeder.com/about</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  -->
+</urlset>
